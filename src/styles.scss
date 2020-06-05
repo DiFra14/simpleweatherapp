@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+// Global settings
+
+:root {
+    --primary-color: #2D5D7B;
+    --font-color: #686868;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    font-size: 10px; // 1rem = 10px
+}
+
+// Utility
+
+.text_small {
+    font-size: 1.2rem;
+}

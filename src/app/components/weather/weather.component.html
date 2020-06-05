@@ -1,0 +1,11 @@
+<div class="wheater-content" *ngIf="weather">
+    <div class="city-info">
+        <img src="{{ weather.current.condition.icon }}" alt="icon_weather">
+        <h2 class="city-info__city">{{ weather.location.name }}</h2>
+        <p class="city-info__temperature">{{ weather.current.temp_c }}°C</p>
+    </div>
+    <div class="city-details">
+        <p class="city-details__umidity text_small">Humidity: {{ weather.current.humidity }}%</p>
+        <p class="city-details__sun text_small">Sunrise: {{ weather.forecast.forecastday[0].astro.sunrise }}</p>
+    </div>
+</div>

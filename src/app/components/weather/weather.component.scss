@@ -1,0 +1,61 @@
+:host { 
+    height: calc(100vh - 200px); 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wheater-content {
+    width: 30%;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0rem 2rem 6rem rgba(0, 0, 0, 0.3);
+    transition: all .4s;
+
+    &:hover {
+        transform: translateY(-1rem);
+        box-shadow: 0rem 4rem 6rem rgba(0, 0, 0, 0.2);
+    }
+}
+
+.city-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &__city {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+    }
+
+    &__temperature {
+        font-size: 3rem;
+        font-weight: 400;
+    }
+}
+
+.city-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > *:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &__umidity {
+
+    }
+
+    &__sun {
+
+    }
+}

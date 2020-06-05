@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="search-city">
+        <form #f="ngForm" class="search-city__form" (ngSubmit)="searchCityHandler(f)">
+            <input class="search-city__form--searchcity" type="text" [ngModel] name="city" placeholder="Insert City name" autocomplete="off">
+            <button type="submit" class="btn btn-myweather">Search!</button>
+        </form>
+    </div>
+</div>

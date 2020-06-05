@@ -1,0 +1,60 @@
+.container {
+    width: 100%;
+    background-color: white;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--font-color);
+}
+
+.search-city {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+
+    &__form {
+        display: flex;
+        width: 100%;
+
+        &--searchcity {
+            outline: none;
+            border: 1px solid var(--font-color);
+            padding: 1.2rem;
+            flex: 1;
+            border-radius: 10px;
+            margin-right: 1.5rem;
+            text-transform: uppercase;
+
+            &::placeholder {
+                color: var(--font-color);
+            }
+        }
+    }
+}
+
+.btn {
+    outline: none;
+    background: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-myweather {
+    color: white;
+    background-color: var(--primary-color);
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.4);
+    transition: all .1s;
+
+    &:hover {
+        transform: translateY(.8px);
+    }
+
+    &:active {
+        transform: translateY(1.5px);
+        box-shadow: 0 .2rem .7rem rgba(0, 0, 0, 0.4);
+    }
+}
