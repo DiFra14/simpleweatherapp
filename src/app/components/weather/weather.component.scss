@@ -1,13 +1,14 @@
 :host { 
-    height: calc(100vh - 200px); 
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 5rem;
 }
 
 .wheater-content {
-    width: 30%;
+    width: 40%;
     font-size: 1.6rem;
     display: flex;
     flex-direction: column;
@@ -16,6 +17,9 @@
     border-radius: 10px;
     box-shadow: 0rem 2rem 6rem rgba(0, 0, 0, 0.3);
     transition: all .4s;
+    animation: fromDown .4s;
+    margin-bottom: 3.5rem;
+    cursor: pointer;
 
     &:hover {
         transform: translateY(-1rem);
@@ -52,10 +56,24 @@
     }
 
     &__umidity {
-
     }
 
     &__sun {
+    }
+}
 
+.forecast {
+    width: 40%;
+}
+
+@keyframes fromDown {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

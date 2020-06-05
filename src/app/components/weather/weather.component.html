@@ -1,4 +1,4 @@
-<div class="wheater-content" *ngIf="weather">
+<div class="wheater-content" *ngIf="weather" (click)="showForecast()">
     <div class="city-info">
         <img src="{{ weather.current.condition.icon }}" alt="icon_weather">
         <h2 class="city-info__city">{{ weather.location.name }}</h2>
@@ -8,4 +8,7 @@
         <p class="city-details__umidity text_small">Humidity: {{ weather.current.humidity }}%</p>
         <p class="city-details__sun text_small">Sunrise: {{ weather.forecast.forecastday[0].astro.sunrise }}</p>
     </div>
+</div>
+<div class="forecast" *ngIf="forecast">
+    <app-forecast [forecast]="weather.forecast"></app-forecast>
 </div>

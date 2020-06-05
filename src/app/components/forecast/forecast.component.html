@@ -1,0 +1,12 @@
+<div class="forecast-content" *ngFor="let forecast of forecast.forecastday">
+    <p class="forecast-content__day">{{ forecast.date | date: 'dd/MM/yyyy' }}</p>
+    <div class="forecast-content__temp-details">
+        <img src="{{ forecast.day.condition.icon }}" alt="icon">
+        <p class="temperature">{{ forecast.day.avgtemp_c }}°C</p>
+    </div>
+    <div class="forecast-content__details">
+        <p class="text_small">min: {{ forecast.day.mintemp_c }}°C</p>
+        <p class="text_small">max: {{ forecast.day.maxtemp_c }}°C</p>
+        <p class="text_small">humidity: {{ forecast.day.avghumidity }}%</p>
+    </div>
+</div>

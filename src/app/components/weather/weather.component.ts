@@ -10,16 +10,23 @@ import { Weather } from 'src/app/models/weather';
 export class WeatherComponent implements OnChanges {
   @Input() city: string;
   weather: Weather;
+  forecast: boolean;
 
-  constructor(private weatherService: WeatherService) { }
+  constructor(private weatherService: WeatherService) { 
+    this.forecast = false;
+  }
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.city.currentValue) {
       this.weatherService.getWeatherFromCity(this.city).subscribe(res => {
         this.weather = res
+        this.forecast = false;
         console.log(res);
       });
     }
   }
 
+  showForecast() {
+    this.forecast = !this.forecast;
+  }
 }

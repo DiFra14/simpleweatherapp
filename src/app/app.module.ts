@@ -7,14 +7,16 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { ForecastComponent } from './components/forecast/forecast.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    ForecastComponent
   ],
   imports: [
     BrowserModule,
